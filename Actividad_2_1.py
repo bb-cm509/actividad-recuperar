@@ -1,3 +1,4 @@
+from abc import ABC, abstractmethod
 class Equipo:
     def __init__(self, codigo, tipo):
         self.codigo = codigo
