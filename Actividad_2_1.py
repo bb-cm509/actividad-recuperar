@@ -8,8 +8,7 @@ class Equipo (ABC):
 
     @abstractmethod
     def asignar(self, responsable):
-        self.estado = "asignado a " + responsable
-        return self.estado
+        pass
 
 class PC(Equipo):
     def __init__(self, codigo, procesador):
