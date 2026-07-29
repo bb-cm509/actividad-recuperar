@@ -30,7 +30,7 @@ class Impresora(Equipo):
         if self.estado == "disponible":
             return super().asignar(responsable)
         else:
-            raise Exception("El equipo ya está asignado")
+            raise Exception(f"El equipo {self.codigo} ya está asignado")
 
 inventario = [PC("INT-001", "i5"), PC("INT-002", "i7"), Impresora("INT-003", "Láser")]
 
