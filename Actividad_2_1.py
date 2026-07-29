@@ -19,7 +19,7 @@ class PC(Equipo):
         if self.estado == "disponible":
             return super().asignar(responsable)
         else:
-            raise Exception("El equipo ya está asignado")
+            raise Exception(f"El equipo {self.codigo} ya está asignado")
 
 class Impresora(Equipo):
     def __init__(self, codigo, tipo_impresion):
