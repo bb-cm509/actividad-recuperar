@@ -4,7 +4,7 @@ class Equipo:
         self.tipo = tipo
         self.estado = "disponible"
 
-    def asignar(self, responsable)
+    def asignar(self, responsable):
         self.estado = "asignado a" + responsable
         return self.estado
 
