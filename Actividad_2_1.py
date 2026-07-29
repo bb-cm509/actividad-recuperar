@@ -4,7 +4,9 @@ class Equipo (ABC):
         self.codigo = codigo
         self.tipo = tipo
         self.estado = "disponible"
+        
 
+    @abstractmethod
     def asignar(self, responsable):
         self.estado = "asignado a " + responsable
         return self.estado
