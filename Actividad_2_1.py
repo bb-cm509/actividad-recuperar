@@ -24,6 +24,12 @@ class Impresora(Equipo):
         super().__init__(codigo, "Impresora")
         self.tipo_impresion = tipo_impresion
 
+    def asignar(self, responsable):
+        if self.estado == "disponible":
+            return super().asignar(responsable)
+        else:
+            raise Exception("El equipo ya está asignado")
+
 inventario = [PC("INT-001", "i5"), PC("INT-002", "i7"), Impresora("INT-003", "Láser")]
 
 for equipo in inventario:
