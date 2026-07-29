@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-class Equipo:
+class Equipo (ABC):
     def __init__(self, codigo, tipo):
         self.codigo = codigo
         self.tipo = tipo
