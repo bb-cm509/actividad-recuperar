@@ -5,7 +5,7 @@ class Equipo:
         self.estado = "disponible"
 
     def asignar(self, responsable):
-        self.estado = "asignado a" + responsable
+        self.estado = "asignado a " + responsable
         return self.estado
 
 class PC(Equipo):
