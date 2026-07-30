@@ -8,7 +8,12 @@ class Equipo (ABC):
 
     @abstractmethod
     def asignar(self, responsable):
-        pass
+        if self.estado == "disponible":
+            self.estado = "asignado"
+            return f"El equipo {self.codigo} ha sido asignado a {responsable}"
+        else:
+            raise Exception(f"El equipo {self.codigo} ya está asignado")  
+        
 
 class PC(Equipo):
     def __init__(self, codigo, procesador):
